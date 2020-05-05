@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ldy.dao.OrderMapper">
+    <!-- select根据order id找到对应商品的list！-->
+    <select id="findGoodsListByOrderId" parameterType="Integer" resultType="Goods">
+        select tb_goods.id, tb_goods.name, tb_goods.price,tb_order_goods.num as byNum
+        from tb_goods,tb_order_goods
+        WHERE tb_goods.id=tb_order_goods.googsId
+        AND tb_order_goods.orderId=1
+    </select>
+    <resultMap id="OrderMap01" type="Order">
+        <id property="id" column="id"/>
+        <result property="status" column="status"/>
+        <result property="createDate" column="createDate"/>
+        <result property="personId" column="personId"/>
+        <collection property="goodsList" ofType="Goods"
+        column="id"
+        select="findGoodsListByOrderId"/>
+        <!-- select根据order id找到对应商品的list！-->
+    </resultMap>
+    <select id="findOrderById" parameterType="Integer" resultMap="OrderMap01">
+        SELECT * FROM tb_order WHERE id=#{id}
+    </select>
+    <!--嵌套结果-->
+    <resultMap id="OrderMao02" type="Order">
+        <id property="id" column="id"/>
+        <result property="status" column="status"/>
+        <result property="createDate" column="createDate"/>
+        <result property="personId" column="personId"/>
+        <collection property="goodsList" ofType="Goods">
+            <id property="id" column="gid"/>
+            <result property="name" column="name"/>
+            <result property="price" column="price"/>
+            <result property="byNum" column="num"/>
+        </collection>
+    </resultMap>
+    <!--一个查询语句需要吧所有信息都查出来
+        1.订单相关数据；
+        2.订单对应的商品相关数据
+
+        1.先写sql select 根据查询结果的二维表再去写resultMap
+        2.根据查询结果去做映射
+    -->
+    <select id="findOrderById2" parameterType="Integer"
+    resultMap="OrderMao02">
+        select t_o.*, t_o_g.googsId as gid,t_g.`name`, t_g.price, t_o_g.num
+        FROM tb_order t_o
+        LEFT JOIN tb_order_goods t_o_g
+        ON t_o.id=t_o_g.orderId
+        LEFT JOIN tb_goods t_g
+        ON t_o_g.googsId=t_g.id
+        where t_o.id=#{id}
+    </select>
+</mapper>

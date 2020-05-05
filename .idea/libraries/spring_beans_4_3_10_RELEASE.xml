@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="spring-beans-4.3.10.RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-beans-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/slf4j-api-1.7.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-core-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-jdbc-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-expression-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/slf4j-log4j12-1.7.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/mybatis-spring-1.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-context-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-aspects-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-aop-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/spring-tx-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/ognl-3.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/mysql-connector-java-5.1.44-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/mybatis-3.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/log4j-core-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/log4j-api-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/javassist-3.26.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/commons-pool2-2.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/commons-dbcp2-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/aspectjweaver-1.8.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/cglib-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Java EE/lib/asm-7.1.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>
